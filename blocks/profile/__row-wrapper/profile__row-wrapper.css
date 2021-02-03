@@ -1,0 +1,4 @@
+.profile__row-wrapper {
+    display: flex;
+    align-items: baseline;
+}

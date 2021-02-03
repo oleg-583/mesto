@@ -1,0 +1,8 @@
+.button-reset {
+    box-sizing: border-box;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}

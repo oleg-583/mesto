@@ -1,0 +1,11 @@
+.popup__content {
+    max-width: 430px;
+    background: #fff;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .popup__content {
+        max-width: 282px;
+    }
+}
