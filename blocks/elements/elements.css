@@ -11,6 +11,7 @@
 
 @media (max-width: 880px) {
     .elements {
+        padding: 0;
         max-width: 579px;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 17px;
