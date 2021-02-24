@@ -1,5 +1,4 @@
-import { initialCards } from "./pictures.js";
-
+// import { initialCards } from "./pictures.js";
 
 // инфо профиля
 const textName = document.querySelector('.profile__name');
@@ -99,8 +98,8 @@ function getCard({ name, link }) {
     likeButton.addEventListener("click", toggleLike);
 
     const imgEl = newCard.querySelector(".elements__image");
-    imgEl.setAttribute("src", link);
-    imgEl.setAttribute("alt", name);
+    imgEl.src = link;
+    imgEl.alt = name;
     imgEl.addEventListener("click", viewImage);
 
     return newCard;
@@ -108,14 +107,12 @@ function getCard({ name, link }) {
 
 // активация лайка
 function toggleLike(event) {
-    console.log('like')
     event.target.classList.toggle("elements__like_active");
 }
+
 //удаление карточки 
 function deleteCard(event) {
-    const targetCard = event.target;
-    const targetItem = targetCard.closest(".elements__element");
-    targetItem.remove();
+    event.target.closest(".elements__element").remove();
 }
 
 //сохранение попапа создания картинок
@@ -134,6 +131,7 @@ function addCardSubmit(event) {
 
 // открытие изображения
 function viewImage(event) {
+    imgPhoto.alt = event.target.alt;
     imgPhoto.src = event.target.src;
     imgName.textContent = event.target.alt;
 
