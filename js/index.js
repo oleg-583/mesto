@@ -1,5 +1,3 @@
-// import { initialCards } from "./pictures.js";
-
 // инфо профиля
 const textName = document.querySelector('.profile__name');
 const textDescription = document.querySelector('.profile__description');
