@@ -1,12 +1,5 @@
 .popup__form {
-    padding: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-@media (max-width: 600px) {
-    .popup__form {
-        padding: 22px;
-    }
 }
