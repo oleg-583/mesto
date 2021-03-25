@@ -1,3 +1,6 @@
+import { initialCards } from "./card.js";
+import { FormValidator, validateClasses } from "./formValidator.js";
+
 // инфо профиля
 const textName = document.querySelector('.profile__name');
 const textDescription = document.querySelector('.profile__description');
@@ -25,7 +28,6 @@ const cross = document.querySelectorAll('.popup__close-button');
 const addButton = document.querySelector('.profile__add-button');
 const cardsContainer = document.querySelector(".elements__list");
 const templateCard = document.querySelector(".template");
-
 const popups = document.querySelectorAll(".popup");
 
 // Функции
