@@ -1,5 +1,5 @@
 import { initialCards } from "./card.js";
-import { FormValidator, validateClasses } from "./formValidator.js";
+import { validateClasses, FormValidator } from "./formValidator.js";
 
 // инфо профиля
 const textName = document.querySelector('.profile__name');
@@ -159,3 +159,11 @@ popups.forEach(popup => popup.addEventListener("click", closePopupOverlay))
 
 //загрузка базовых карточек
 initialCards.forEach((card) => renderCard(getCard(card)));
+
+
+//вызов классов 
+const profileFormValidator = new FormValidator(validateClasses, editForm);
+profileFormValidator.enableValidation();
+
+const addCardFormValidator = new FormValidator(validateClasses, addCardForm);
+addCardFormValidator.enableValidation();

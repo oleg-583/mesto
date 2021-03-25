@@ -1,3 +1,4 @@
+// export 
 const validateClasses = {
     formSelector: ".popup__form",
     inputSelector: ".popup__input",
@@ -5,7 +6,8 @@ const validateClasses = {
     inputErrorClass: ".popup__input-error",
     errorClass: "popup__input-error_active",
 };
-export default class FormValidator {
+
+class FormValidator {
     constructor(settings, form) {
         this._inputSelector = settings.inputSelector;
         this._submitButtonSelector = settings.submitButtonSelector;
@@ -91,3 +93,5 @@ export default class FormValidator {
         this._toggleButtonState();
     }
 }
+
+export { validateClasses, FormValidator }
