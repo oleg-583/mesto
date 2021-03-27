@@ -78,25 +78,25 @@ function renderCard(cardEl) {
     cardsContainer.prepend(cardEl);
 }
 
-function getCard({ name, link }) {
-    const newCard = templateCard.content.cloneNode(true);
+// function getCard({ name, link }) {
+//     const newCard = templateCard.content.cloneNode(true);
 
-    const nameCard = newCard.querySelector(".elements__name");
-    nameCard.textContent = name;
+//     const nameCard = newCard.querySelector(".elements__name");
+//     nameCard.textContent = name;
 
-    const trashButton = newCard.querySelector(".elements__trash-button");
-    trashButton.addEventListener("click", deleteCard);
+//     const trashButton = newCard.querySelector(".elements__trash-button");
+//     trashButton.addEventListener("click", deleteCard);
 
-    const likeButton = newCard.querySelector(".elements__like");
-    likeButton.addEventListener("click", toggleLike);
+//     const likeButton = newCard.querySelector(".elements__like");
+//     likeButton.addEventListener("click", toggleLike);
 
-    const imgEl = newCard.querySelector(".elements__image");
-    imgEl.src = link;
-    imgEl.alt = name;
-    imgEl.addEventListener("click", viewImage);
+//     const imgEl = newCard.querySelector(".elements__image");
+//     imgEl.src = link;
+//     imgEl.alt = name;
+//     imgEl.addEventListener("click", viewImage);
 
-    return newCard;
-}
+//     return newCard;
+// }
 
 // активация лайка
 function toggleLike(event) {
@@ -143,6 +143,12 @@ function closePopupOnEsc(evt) {
     if (evt.key === "Escape") {
         closePopup(popupOpened);
     }
+}
+
+//функция открытия новых карточек
+function getCard(data) {
+    const card = new Card(data, handleViewImage, ".card-template");
+    return card.generateCard();
 }
 
 //обработчики
