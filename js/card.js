@@ -31,6 +31,8 @@ class Card {
         this._ViewImage = ViewImage;
         this._templateSelector = templateSelector;
     }
+
+    //шаблон
     _getTemplate() {
         return document
             .querySelector(this._templateSelector)
@@ -39,6 +41,7 @@ class Card {
             .cloneNode(true);
     }
 
+    //создание карты
     generateCard() {
         this._element = this._getTemplate();
         this._setEventListeners();
@@ -51,14 +54,18 @@ class Card {
         return this._element;
     }
 
-    deleteCard() {
-        this._removeBtn.remove(".elements__element");
+
+    _handleDeleteCard() {
+        this._element.remove();
+        this._element = null;
     }
 
     _handleToggleLike() {
-        this._likeBtn.classList.toggle("elements__like_active");
+        this._likeBtn.classList.toggle(".elements__like_active");
     }
 
+
+    //функции кликов
     _setEventListeners() {
         this._removeBtn = this._element.querySelector(".elements__trash-button");
         this._removeBtn.addEventListener("click", () => this._handleDeleteCard());

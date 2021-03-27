@@ -1,4 +1,4 @@
-import { initialCards } from "./card.js";
+import { initialCards, Card } from "./card.js";
 import { validateClasses, FormValidator } from "./formValidator.js";
 
 // инфо профиля
@@ -78,38 +78,7 @@ function renderCard(cardEl) {
     cardsContainer.prepend(cardEl);
 }
 
-// function getCard({ name, link }) {
-//     const newCard = templateCard.content.cloneNode(true);
-
-//     const nameCard = newCard.querySelector(".elements__name");
-//     nameCard.textContent = name;
-
-//     const trashButton = newCard.querySelector(".elements__trash-button");
-//     trashButton.addEventListener("click", deleteCard);
-
-//     const likeButton = newCard.querySelector(".elements__like");
-//     likeButton.addEventListener("click", toggleLike);
-
-//     const imgEl = newCard.querySelector(".elements__image");
-//     imgEl.src = link;
-//     imgEl.alt = name;
-//     imgEl.addEventListener("click", viewImage);
-
-//     return newCard;
-// }
-
-// активация лайка
-function toggleLike(event) {
-    event.target.classList.toggle("elements__like_active");
-}
-
-//удаление карточки 
-function deleteCard(event) {
-    event.target.closest(".elements__element").remove();
-}
-
 //сохранение попапа создания картинок
-
 function addCardSubmit(event) {
     event.preventDefault();
 
@@ -132,7 +101,6 @@ function viewImage(event) {
 }
 
 // закрытие попапов на свободную область  
-
 function closePopupOverlay(evt) {
     closePopup(evt.target);
 }
@@ -147,7 +115,7 @@ function closePopupOnEsc(evt) {
 
 //функция открытия новых карточек
 function getCard(data) {
-    const card = new Card(data, handleViewImage, ".card-template");
+    const card = new Card(data, viewImage, ".template");
     return card.generateCard();
 }
 
