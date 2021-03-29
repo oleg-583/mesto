@@ -61,9 +61,8 @@ class Card {
     }
 
     _handleToggleLike() {
-        this._likeBtn.classList.toggle(".elements__like_active");
+        this._likeBtn.classList.toggle("elements__like_active");
     }
-
 
     //функции кликов
     _setEventListeners() {
