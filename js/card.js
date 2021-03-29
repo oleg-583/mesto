@@ -54,12 +54,13 @@ class Card {
         return this._element;
     }
 
-
+    //удаление карточки
     _handleDeleteCard() {
         this._element.remove();
         this._element = null;
     }
 
+    //активация лайка 
     _handleToggleLike() {
         this._likeBtn.classList.toggle("elements__like_active");
     }
