@@ -48,8 +48,8 @@ class Card {
 
         this._element.querySelector(".elements__name").textContent = this._name;
 
-        this._imgEl.src = this._link;
-        this._imgEl.alt = this._name;
+        this._imgPhoto.src = this._link;
+        this._imgPhoto.alt = this._name;
 
         return this._element;
     }
@@ -73,8 +73,8 @@ class Card {
         this._likeBtn = this._element.querySelector(".elements__like");
         this._likeBtn.addEventListener("click", () => this._handleToggleLike());
 
-        this._imgEl = this._element.querySelector(".elements__image");
-        this._imgEl.addEventListener("click", () => this._ViewImage(this._name, this._link));
+        this._imgPhoto = this._element.querySelector(".elements__image");
+        this._imgPhoto.addEventListener("click", () => this._ViewImage(this._name, this._link));
     }
 }
 

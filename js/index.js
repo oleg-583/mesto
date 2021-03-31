@@ -27,7 +27,7 @@ const editButton = document.querySelector('.profile__edit-button');
 const cross = document.querySelectorAll('.popup__close-button');
 const addButton = document.querySelector('.profile__add-button');
 const cardsContainer = document.querySelector(".elements__list");
-const templateCard = document.querySelector(".template");
+// const templateCard = document.querySelector(".template");
 const popups = document.querySelectorAll(".popup");
 
 // Функции
@@ -92,11 +92,10 @@ function addCardSubmit(event) {
 }
 
 // открытие изображения
-function viewImage(event) {
-    imgPhoto.alt = event.target.alt;
-    imgPhoto.src = event.target.src;
-    imgName.textContent = event.target.alt;
-
+function viewImage(name, link) {
+    imgPhoto.alt = link;
+    imgPhoto.src = name;
+    imgName.textContent = name;
     openPopup(imgPopup);
 }
 
