@@ -93,8 +93,8 @@ function addCardSubmit(event) {
 
 // открытие изображения
 function viewImage(name, link) {
-    imgPhoto.alt = link;
-    imgPhoto.src = name;
+    imgPhoto.alt = name;
+    imgPhoto.src = link;
     imgName.textContent = name;
     openPopup(imgPopup);
 }
