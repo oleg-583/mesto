@@ -1,12 +1,3 @@
-// export 
-const validateClasses = {
-    formSelector: ".popup__form",
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__save-button",
-    inputErrorClass: ".popup__input-error",
-    errorClass: "popup__input-error_active",
-};
-
 class FormValidator {
     constructor(settings, form) {
         this._inputSelector = settings.inputSelector;
@@ -94,4 +85,4 @@ class FormValidator {
     }
 }
 
-export { validateClasses, FormValidator }
+export { FormValidator }
