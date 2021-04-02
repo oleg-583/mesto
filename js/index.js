@@ -139,7 +139,9 @@ function viewImage(name, link) {
 
 // закрытие попапов на свободную область  
 function closePopupOverlay(evt) {
-    closePopup(evt.target);
+    if (evt.target.classList.contains("popup_opened")) {
+        closePopup(evt.target);
+    }
 }
 
 //функция закрытия попапа с помощью Esc

@@ -38,12 +38,14 @@ class FormValidator {
         }
     };
 
+    //функция не верной валидации 
+    _hasNotValidInput() {
+        return this._inputList.some((inputElement) => !inputElement.validity.valid);
+    }
+
     //функция управления активностью кнопки
     _toggleButtonState = () => {
-        const findAtLeastOneNotValid = (inputElement) => !inputElement.validity.valid;
-        const hasNotValidInput = this._inputList.some(findAtLeastOneNotValid);
-
-        if (hasNotValidInput) {
+        if (this._hasNotValidInput()) {
             this._buttonElement.setAttribute("disabled", true);
             this._buttonElement.classList.add(this._inactiveButtonClass);
         } else {
