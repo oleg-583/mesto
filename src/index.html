@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MESTO</title>
-    <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
     <div class="page__container">
         <header class="header">
-            <img class="logo" src="./images/logo.svg" alt="mesto">
+            <img class="logo" src="<%=require('./images/logo.svg')%>" alt="mesto">
         </header>
 
         <main class="content">
             <section class="profile">
-                <img src="./images/profile-image.jpg " alt="изображение аватара" class="profile__avatar">
+                <img src="<%=require('./images/profile-image.jpg')%>" alt="изображение аватара" class="profile__avatar">
                 <div class="profile__info">
                     <div class="profile__row-wrapper">
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -98,9 +97,11 @@
             <button type="button" aria-label="Нравится" class="elements__like button-reset"></button>
           </div>
         </li>
-      </template>
+    </template>
 
-    <script type="module" src="./pages/index.js"></script>
+
+
+    <!-- <script type="module" src="./pages/index.js"></script> -->
 
 
 </body>
