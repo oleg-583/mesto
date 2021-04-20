@@ -8,7 +8,8 @@ import {
     textNameInput,
     textDescriptionInput,
     addCardForm,
-    profileForm
+    profileForm,
+    cardTemplateSelector
 } from "../js/utils/constatns.js";
 
 import { Card } from "../js/components/card.js";
@@ -39,7 +40,7 @@ const getCard = (data) => {
     const card = new Card(
         data,
         () => viewImagePopup.open(data.name, data.link),
-        ".template"
+        cardTemplateSelector
     );
     return card.generateCard();
 };
