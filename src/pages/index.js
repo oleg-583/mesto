@@ -9,7 +9,9 @@ import {
     textDescriptionInput,
     addCardForm,
     profileForm,
-    cardTemplateSelector
+    popupPhotoSelector,
+    cardTemplateSelector,
+    elementsListSelector
 } from "../js/utils/constatns.js";
 
 import { Card } from "../js/components/card.js";
@@ -34,7 +36,7 @@ const handleEditProfile = () => {
     profilePopup.open();
 };
 
-const viewImagePopup = new PopupWithImage(".popup_photo");
+const viewImagePopup = new PopupWithImage(popupPhotoSelector);
 
 const getCard = (data) => {
     const card = new Card(
@@ -51,7 +53,7 @@ const cardsSection = new Section({
             cardsSection.addItem(getCard(data));
         },
     },
-    ".elements__list"
+    elementsListSelector
 );
 
 const user = new UserInfo({

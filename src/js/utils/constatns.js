@@ -48,7 +48,9 @@ const textDescriptionInput = profileForm.querySelector('.popup__input_type_descr
 const addCardPopup = document.querySelector(".popup_add-card");
 const addCardForm = addCardPopup.querySelector(".popup__form_add-card");
 
-
+//Селекторы
+const popupPhotoSelector = ".popup_photo";
+const elementsListSelector = ".elements__list";
 const cardTemplateSelector = ".template";
 
 
@@ -62,5 +64,7 @@ export {
     textDescriptionInput,
     addCardForm,
     profileForm,
-    cardTemplateSelector
+    popupPhotoSelector,
+    cardTemplateSelector,
+    elementsListSelector
 };
