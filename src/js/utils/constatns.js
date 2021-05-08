@@ -34,24 +34,30 @@ const validateClasses = {
     errorClass: "popup__input-error_active",
 };
 
+//Селекторы
+const popupPhotoSelector = ".popup_photo";
+const elementsListSelector = ".elements__list";
+const cardTemplateSelector = ".template";
+const popupProfileSelector = ".popup_profile";
+const nameSelector = ".profile__name";
+const descriptionSelector = ".profile__description";
+const popupAddCardSelector = ".popup_add-card";
+
 //кнопки 
 const editButton = document.querySelector('.profile__edit-button');
 const addButton = document.querySelector('.profile__add-button');
 
 //редактирование профиля
-const popupProfile = document.querySelector('.popup_profile');
+const popupProfile = document.querySelector(popupProfileSelector);
 const profileForm = popupProfile.querySelector('.popup__form');
 const textNameInput = profileForm.querySelector('.popup__input_type_name');
 const textDescriptionInput = profileForm.querySelector('.popup__input_type_description');
 
 // Форма добавления карточки
-const addCardPopup = document.querySelector(".popup_add-card");
+const addCardPopup = document.querySelector(popupAddCardSelector);
 const addCardForm = addCardPopup.querySelector(".popup__form_add-card");
 
-//Селекторы
-const popupPhotoSelector = ".popup_photo";
-const elementsListSelector = ".elements__list";
-const cardTemplateSelector = ".template";
+
 
 
 
@@ -66,5 +72,9 @@ export {
     profileForm,
     popupPhotoSelector,
     cardTemplateSelector,
-    elementsListSelector
+    elementsListSelector,
+    popupProfileSelector,
+    nameSelector,
+    descriptionSelector,
+    popupAddCardSelector
 };

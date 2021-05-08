@@ -11,7 +11,11 @@ import {
     profileForm,
     popupPhotoSelector,
     cardTemplateSelector,
-    elementsListSelector
+    elementsListSelector,
+    popupProfileSelector,
+    nameSelector,
+    descriptionSelector,
+    popupAddCardSelector
 } from "../js/utils/constatns.js";
 
 import { Card } from "../js/components/card.js";
@@ -57,8 +61,8 @@ const cardsSection = new Section({
 );
 
 const user = new UserInfo({
-    nameSelector: ".profile__name",
-    descriptionSelector: ".profile__description",
+    nameSelector: nameSelector,
+    descriptionSelector: descriptionSelector,
 });
 
 const profileSubmitHandler = (data) => {
@@ -69,7 +73,7 @@ const profileSubmitHandler = (data) => {
     profilePopup.close();
 };
 
-const profilePopup = new PopupWithForm(".popup_profile", (data) =>
+const profilePopup = new PopupWithForm(popupProfileSelector, (data) =>
     profileSubmitHandler(data)
 );
 
@@ -80,7 +84,7 @@ const addCardSubmitHandler = (data) => {
     addCardPopup.close();
 };
 
-const addCardPopup = new PopupWithForm(".popup_add-card", (data) =>
+const addCardPopup = new PopupWithForm(popupAddCardSelector, (data) =>
     addCardSubmitHandler(data)
 );
 
